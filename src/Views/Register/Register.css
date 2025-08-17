@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.register-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #253558;
+    height: 100vh;
+}
+
+
+.register-card{
+    width: 450px;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.register-header{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.name-fields{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.form-group{
+    margin-bottom: 15px;
+}
+
+.input-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon{
+   position: absolute;
+    left: 10px;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    padding-left: 40px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+
+label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.toggle-btn{
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+}
+
+.toggle-icon{
+    cursor: pointer;
+    color: #666;
+}
+
+.register-btn{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: rgb(35, 35, 77);
+    color: #fff;
+    cursor: pointer;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.separator-contain {
+    margin: 0 10px;
+    color: #666;
+}
+
+.separator hr {
+    flex: 1;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+.google-img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.social-google-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.social-register{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.login-redirect{
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    cursor: pointer;
+}
+
+.login-btn{
+    background: none;
+    border: none;
+    color: rgb(35, 35, 77);
+    font-weight: bold;
+    cursor: pointer;
+    padding-left: 5px;
+}

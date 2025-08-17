@@ -1,0 +1,148 @@
+.animated-bar-container {
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.5s ease;
+}
+
+.animated-bar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.animated-bar-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.animated-bar-icon {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: rgba(79, 70, 229, 0.1);
+  transition: all 1s ease;
+}
+
+.animated-bar-icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.animated-bar-title h3 {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.animated-bar-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  transition: all 0.5s ease;
+}
+
+.scale-110 {
+  transform: scale(1.1);
+}
+
+.scale-100 {
+  transform: scale(1);
+}
+
+/* Progress bar styles */
+.animated-bar-progress {
+  position: relative;
+}
+
+.animated-bar-bg {
+  width: 100%;
+  background-color: #e5e7eb;
+  border-radius: 0.75rem;
+  height: 1rem;
+  overflow: hidden;
+}
+
+.animated-bar-fill {
+  height: 100%;
+  transition: all 2s ease-out;
+  border-radius: 0.75rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-bar-shimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
+  opacity: 0.3;
+  animation: pulse 2s infinite;
+}
+
+.animated-bar-highlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 1.5rem;
+  background: linear-gradient(to right, transparent, white, transparent);
+  opacity: 0.5;
+  transform: translateX(-100%);
+  animation: highlight 3s infinite;
+}
+
+.animated-bar-end {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 0.25rem;
+  background-color: white;
+  opacity: 0.8;
+  border-radius: 0.75rem;
+  animation: pulse 1.5s infinite;
+}
+
+.animated-bar-sparkle {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.animated-bar-sparkle-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #f59e0b;
+  border-radius: 9999px;
+  animation: ping 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes highlight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(calc(100% + 1.5rem));
+  }
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  70%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}

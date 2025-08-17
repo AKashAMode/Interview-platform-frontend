@@ -1,0 +1,52 @@
+.circular-progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circular-progress-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.circular-progress-svg {
+  transform: rotate(-90deg);
+}
+
+.circular-progress-circle {
+  transition: all 1.5s ease-out;
+}
+
+.circular-progress-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circular-progress-value {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.circular-progress-title {
+  text-align: center;
+}
+
+.circular-progress-title h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.circular-progress-rating {
+  font-size: 0.75rem;
+  color: #4b5563;
+}

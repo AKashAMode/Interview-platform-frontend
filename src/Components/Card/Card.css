@@ -1,0 +1,106 @@
+
+
+* {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.card {
+  width: 340px;
+  border-radius: 16px;
+  background: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon-contain {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .feature-icon-contain {
+  transform: scale(1.1) rotate(2deg);
+}
+
+.feature-icon {
+  width: 36px;
+  height: 36px;
+  color: #ffffff;
+}
+
+.feature-details {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 8px;
+}
+
+.feature-details h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 8px 0 0;
+}
+
+.feature-details p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+.feature-details span {
+  background-color: #f8f8f8;
+  color: #333;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  border-radius: 12px;
+  margin-top: 4px;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.feature-details span:hover {
+  background-color: #f1f1f1;
+}
+
+/* Gradient Background Color Classes */
+.bg-gradient-blue {
+  background: linear-gradient(135deg, #3b82f6, #60a5fa);
+}
+
+.bg-gradient-green {
+  background: linear-gradient(135deg, #34d399, #10b981);
+}
+
+.bg-gradient-violet {
+  background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+}
+
+.bg-gradient-orange {
+  background: linear-gradient(135deg, #f97316, #facc15);
+}
+
+.bg-gradient-red {
+  background: linear-gradient(135deg, #ef4444, #f87171);
+}
+
+.bg-gradient-darkgreen {
+  background: linear-gradient(135deg, #065f46, #10b981);
+}
