@@ -1,7 +1,7 @@
 
 import {User, Mail, Lock,Eye, EyeOff} from 'lucide-react'
 import './Register.css';
-import GoogleImg from '../../Assets/google.png';
+import GoogleImg from '../../assets/google.png';
 import { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import axios from 'axios';
