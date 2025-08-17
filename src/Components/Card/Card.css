@@ -80,7 +80,6 @@
   background-color: #f1f1f1;
 }
 
-/* Gradient Background Color Classes */
 .bg-gradient-blue {
   background: linear-gradient(135deg, #3b82f6, #60a5fa);
 }
