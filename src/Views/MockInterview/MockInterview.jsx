@@ -5,7 +5,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:9092/api';
+const API_BASE_URL = 'https://interview-platform-backend-2.onrender.com/api';
 
 export default function MockInterview() {
   const location = useLocation();

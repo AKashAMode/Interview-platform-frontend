@@ -36,7 +36,7 @@ function LoginComponent(){
 
           try{
 
-            const response = await axios.post('http://localhost:9092/api/auth/login', formData);
+            const response = await axios.post('https://interview-platform-backend-2.onrender.com/api/auth/login', formData);
              
             if(response.data.token){
                localStorage.setItem('token', response.data.token);

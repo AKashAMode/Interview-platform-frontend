@@ -1,219 +1,12 @@
-
-// import React, { useState } from 'react';
-// import { Play, Settings, Shield, Camera, Activity, AlertTriangle } from 'lucide-react';
-// import "./AiInterview.css";
-// import Header from "../../Components/Header/Header";
-// import { ToastContainer, toast } from 'react-toastify';
-// import { useNavigate } from 'react-router-dom';
-
-
-// export default function Interview() {
-//   const navigate = useNavigate();
-//   const [config, setConfig] = useState({
-//     role: '',
-//     difficulty: 'Intermediate',
-//     questionCount: '10',
-//     timeLimit: '45',
-//     language: 'JavaScript',
-//     questionType: 'Behavioral Questions'
-//   });
-
-//   const roles = [
-//     'Frontend Developer',
-//     'Backend Developer',
-//   ];
-
-//   const difficulties = ['Beginner', 'Intermediate'];
-//   const questionCounts = ['2', '3', '4', '5'];
-//   const timeLimits = ['5', '10', '15'];
-//   const languages = ['JavaScript', 'Java', 'React'];
-//   const questionTypes = ['Technical Only', 'Behavioral Only'];
-
-//   const handleInputChange = (field, value) => {
-//     setConfig(prev => ({ ...prev, [field]: value }));
-//   };
-
-//   const startInterview = () => {
-//     if (!config.role) {
-//       toast.success('Please select a role to continue');
-//       return;
-//     }else{
-//       navigate("/mockinterview", {state: config});
-      
-//     }
-//   };
-
-//   return (
-//     <>
-//     <Header/>
-//     <div className="interview-container">
-//       <div className="interview-wrapper">
-
-//         <div className="config-card">
-          
-//           <div className="form-grid">
-//             {/* Select Role */}
-//             <div className="form-group">
-//               <label className="form-label">
-//                 Select Role <span className="required">*</span>
-//               </label>
-//               <select
-//                 value={config.role}
-//                 onChange={(e) => handleInputChange('role', e.target.value)}
-//                 className="form-select"
-//               >
-//                 <option value="">Choose your target role</option>
-//                 {roles.map(role => (
-//                   <option key={role} value={role}>{role}</option>
-//                 ))}
-//               </select>
-//             </div>
-
-     
-//             <div className="form-group">
-//               <label className="form-label">Difficulty Level</label>
-//               <select
-//                 value={config.difficulty}
-//                 onChange={(e) => handleInputChange('difficulty', e.target.value)}
-//                 className="form-select"
-//               >
-//                 {difficulties.map(level => (
-//                   <option key={level} value={level}>{level}</option>
-//                 ))}
-//               </select>
-//             </div>
-
-
-//             <div className="form-group">
-//               <label className="form-label">Programming Language</label>
-//               <select
-//                 value={config.language}
-//                 onChange={(e) => handleInputChange('language', e.target.value)}
-//                 className="form-select"
-//               >
-//                 {languages.map(lang => (
-//                   <option key={lang} value={lang}>{lang}</option>
-//                 ))}
-//               </select>
-//             </div>
-
-   
-//             <div className="form-group">
-//               <label className="form-label">Question Count</label>
-//               <select
-//                 value={config.questionCount}
-//                 onChange={(e) => handleInputChange('questionCount', e.target.value)}
-//                 className="form-select"
-//               >
-//                 {questionCounts.map(count => (
-//                   <option key={count} value={count}>{count} Questions</option>
-//                 ))}
-//               </select>
-//             </div>
-
-//             <div className="form-group">
-//               <label className="form-label">Time Limit</label>
-//               <select
-//                 value={config.timeLimit}
-//                 onChange={(e) => handleInputChange('timeLimit', e.target.value)}
-//                 className="form-select"
-//               >
-//                 {timeLimits.map(time => (
-//                   <option key={time} value={time}>{time} Minutes</option>
-//                 ))}
-//               </select>
-//             </div>
-
-
-//             <div className="form-group">
-//               <label className="form-label">Question Type</label>
-//               <select
-//                 value={config.questionType}
-//                 onChange={(e) => handleInputChange('questionType', e.target.value)}
-//                 className="form-select"
-//               >
-//                 {questionTypes.map(type => (
-//                   <option key={type} value={type}>{type}</option>
-//                 ))}
-//               </select>
-//             </div>
-//           </div>
-
-
-//           <div className="stats-grid">
-//             <div className="stat-card stat-questions">
-//               <div className="stat-number">{config.questionCount}</div>
-//               <div className="stat-label">Questions</div>
-//             </div>
-//             <div className="stat-card stat-minutes">
-//               <div className="stat-number">{config.timeLimit}</div>
-//               <div className="stat-label">Minutes</div>
-//             </div>
-//             <div className="stat-card stat-ai">
-//               <div className="stat-number">AI</div>
-//               <div className="stat-label">Powered</div>
-//             </div>
-//             <div className="stat-card stat-monitored">
-//               <div className="stat-number">24/7</div>
-//               <div className="stat-label">Monitored</div>
-//             </div>
-//           </div>
-
-    
-//           <div className="start-section">
-            
-//             <button onClick={startInterview} className="start-button">
-//               <Play className="start-icon" />
-//               Start AI Interview
-//             </button>
-            
-//           </div>
-//         </div>
-
-
-//         <div className="features-grid">
-//           <div className="feature-card">
-//             <div className="feature-icon feature-analysis">
-//               <Activity />
-//             </div>
-//             <h3 className="feature-title">Real-time Analysis</h3>
-//             <p className="feature-description">Get instant feedback on your responses and performance metrics</p>
-//           </div>
-
-//           <div className="feature-card">
-//             <div className="feature-icon feature-secure">
-//               <Shield />
-//             </div>
-//             <h3 className="feature-title">Secure Environment</h3>
-//             <p className="feature-description">Advanced proctoring ensures authentic interview experience</p>
-//           </div>
-
-//           <div className="feature-card">
-//             <div className="feature-icon feature-custom">
-//               <Settings />
-//             </div>
-//             <h3 className="feature-title">Customizable</h3>
-//             <p className="feature-description">Tailor the interview to match your specific role and skill level</p>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//       <ToastContainer/>          
-//     </>
-//   );
-// }
-
-
-
 import React, { useState } from 'react';
-import { Play, Settings, Shield, Camera, Activity, AlertTriangle } from 'lucide-react';
+import { Play, Settings, Shield, Activity } from 'lucide-react';
 import "./AiInterview.css";
 import Header from "../../Components/Header/Header";
 import { ToastContainer, toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:9092/api';
+const API_BASE_URL = 'https://interview-platform-backend-2.onrender.com/api';
 
 export default function Interview() {
   const navigate = useNavigate();
@@ -221,26 +14,26 @@ export default function Interview() {
   const [config, setConfig] = useState({
     role: '',
     difficulty: 'Intermediate',
-    questionCount: 5, // Default to number instead of string
-    timeLimit: 10, // Default to number instead of string
+    questionCount: 5, 
+    timeLimit: 10,
     language: 'JavaScript',
     questionType: 'Behavioral Only' 
   });
 
-  // Updated to match backend data
+
   const roles = [
     'Frontend Developer',
     'Backend Developer',
   ];
 
   const difficulties = ['Beginner', 'Intermediate'];
-  const questionCounts = [2, 3, 4, 5]; // Changed to numbers
-  const timeLimits = [5, 10, 15]; // Changed to numbers
+  const questionCounts = [2, 3, 4, 5]; 
+  const timeLimits = [5, 10, 15];
   const languages = ['JavaScript', 'Java', 'React'];
-  const questionTypes = ['Technical Only', 'Behavioral Only']; // Updated to match backend
+  const questionTypes = ['Technical Only', 'Behavioral Only'];
 
   const handleInputChange = (field, value) => {
-    // Convert string values to numbers where needed
+  
     if (field === 'questionCount' || field === 'timeLimit') {
       value = parseInt(value);
     }

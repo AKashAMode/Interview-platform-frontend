@@ -39,7 +39,7 @@ function Register(){
 
           try{
 
-            const response =  await axios.post('http://localhost:9092/api/auth/register', formData);
+            const response =  await axios.post('https://interview-platform-backend-2.onrender.com/api/auth/register', formData);
 
             if(response.status === 200){
                 toast.success('Registered successfully! Please login to continue.');
