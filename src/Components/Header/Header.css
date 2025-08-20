@@ -184,6 +184,170 @@
   box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
 }
 
+/* Profile Section */
+.profile-section {
+  position: relative;
+}
+
+.profile-menu-container {
+  position: relative;
+}
+
+.profile-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.profile-button:hover {
+  background-color: rgba(100, 116, 139, 0.1);
+}
+
+.profile-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.profile-avatar-large {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+  flex-shrink: 0;
+}
+
+.profile-chevron {
+  transition: transform 0.3s ease;
+  color: #64748b;
+}
+
+.profile-chevron.rotated {
+  transform: rotate(180deg);
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  width: 280px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 1rem;
+  z-index: 1002;
+  animation: profileDropdownIn 0.2s ease-out;
+}
+
+@keyframes profileDropdownIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.profile-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.profile-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #1e293b;
+  margin-bottom: 0.25rem;
+}
+
+.profile-email {
+  font-size: 0.8rem;
+  color: #64748b;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.profile-menu-divider {
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.08);
+  margin-bottom: 0.5rem;
+}
+
+.profile-menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.profile-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #64748b;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.profile-menu-item:hover {
+  background-color: rgba(100, 116, 139, 0.1);
+  color: #334155;
+}
+
+.logout-item {
+  color: #dc2626;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  margin-top: 0.25rem;
+  padding-top: 0.75rem;
+}
+
+.logout-item:hover {
+  background-color: rgba(220, 38, 38, 0.1);
+  color: #b91c1c;
+}
+
 /* Mobile Menu Button - Hidden by default */
 .mobile-menu-btn {
   display: none;
@@ -283,6 +447,22 @@
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.mobile-profile-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobile-profile-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: rgba(248, 250, 252, 0.8);
+  border-radius: 12px;
+  border: 2px solid rgba(102, 126, 234, 0.1);
+}
+
 .mobile-sign-in-link {
   display: block;
   text-decoration: none;
@@ -320,6 +500,30 @@
 .mobile-get-started-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.mobile-sign-out-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  background: rgba(220, 38, 38, 0.1);
+  color: #dc2626;
+  font-weight: 600;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  border: 2px solid rgba(220, 38, 38, 0.2);
+}
+
+.mobile-sign-out-btn:hover {
+  background: rgba(220, 38, 38, 0.15);
+  border-color: rgba(220, 38, 38, 0.3);
+  color: #b91c1c;
 }
 
 /* Mobile Backdrop */
@@ -371,22 +575,24 @@
   .nav-link {
     font-size: 0.9rem;
   }
+
+  .profile-dropdown {
+    width: 260px;
+  }
 }
 
-/* Tablets and Mobile - Show Mobile Menu */
+
 @media (max-width: 768px) {
-  /* Hide desktop navigation */
+
   .desktop-nav,
   .desktop-auth {
     display: none !important;
   }
   
-  /* Show mobile menu button */
   .mobile-menu-btn {
     display: block !important;
   }
-  
-  /* Show mobile navigation overlay */
+
   .mobile-nav-overlay {
     display: block !important;
   }
@@ -441,32 +647,6 @@
   }
   
   .mobile-nav-link {
-    font-size: 1rem;
-    padding: 0.875rem 1rem;
-  }
-  
-  .mobile-sign-in-link,
-  .mobile-get-started-btn {
-    font-size: 1rem;
-    padding: 0.875rem 1rem;
-  }
-}
-
-/* Extra Small Devices */
-@media (max-width: 320px) {
-  .main-header-container {
-    padding: 0.5rem;
-  }
-  
-  .brand-name {
-    font-size: 1.1rem;
-  }
-  
-  .mobile-nav {
-    padding: 1rem 0.75rem;
-  }
-  
-  .mobile-nav-link {
     font-size: 0.95rem;
     padding: 0.75rem 0.875rem;
   }
@@ -488,7 +668,10 @@
 .mobile-nav-link:focus,
 .mobile-sign-in-link:focus,
 .mobile-get-started-btn:focus,
-.mobile-menu-btn:focus {
+.mobile-menu-btn:focus,
+.profile-button:focus,
+.profile-menu-item:focus,
+.mobile-sign-out-btn:focus {
   outline: 2px solid #667eea;
   outline-offset: 2px;
 }
@@ -504,7 +687,32 @@
   
   .mobile-menu-btn,
   .mobile-nav-overlay,
-  .mobile-backdrop {
+  .mobile-backdrop,
+  .profile-dropdown {
     display: none !important;
   }
+
+
+  .mobile-sign-in-link,
+  .mobile-get-started-btn,
+  .mobile-sign-out-btn {
+    font-size: 1rem;
+    padding: 0.875rem 1rem;
+  }
+}
+
+
+@media (max-width: 320px) {
+  .main-header-container {
+    padding: 0.5rem;
+  }
+  
+  .brand-name {
+    font-size: 1.1rem;
+  }
+  
+  .mobile-nav {
+    padding: 1rem 0.75rem;
+  }
+  
 }
